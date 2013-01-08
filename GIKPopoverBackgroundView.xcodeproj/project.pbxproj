@@ -10,14 +10,30 @@
 		60EE6245169BD75E00BCC23D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE6244169BD75E00BCC23D /* UIKit.framework */; };
 		60EE6247169BD75E00BCC23D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE6246169BD75E00BCC23D /* Foundation.framework */; };
 		60EE6249169BD75E00BCC23D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE6248169BD75E00BCC23D /* CoreGraphics.framework */; };
-		60EE624F169BD75F00BCC23D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60EE624D169BD75F00BCC23D /* InfoPlist.strings */; };
 		60EE6251169BD75F00BCC23D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE6250169BD75F00BCC23D /* main.m */; };
 		60EE6255169BD75F00BCC23D /* GIKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE6254169BD75F00BCC23D /* GIKAppDelegate.m */; };
 		60EE6257169BD75F00BCC23D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6256169BD75F00BCC23D /* Default.png */; };
 		60EE6259169BD75F00BCC23D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6258169BD75F00BCC23D /* Default@2x.png */; };
 		60EE625B169BD75F00BCC23D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE625A169BD75F00BCC23D /* Default-568h@2x.png */; };
-		60EE625E169BD75F00BCC23D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EE625C169BD75F00BCC23D /* MainStoryboard.storyboard */; };
 		60EE6261169BD75F00BCC23D /* GIKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE6260169BD75F00BCC23D /* GIKViewController.m */; };
+		60EE6273169BDC4D00BCC23D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6271169BDC4D00BCC23D /* MainStoryboard.storyboard */; };
+		60EE6276169BDC7700BCC23D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6274169BDC7700BCC23D /* InfoPlist.strings */; };
+		60EE627A169BDCE100BCC23D /* GIKPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE6279169BDCE100BCC23D /* GIKPopoverBackgroundView.m */; };
+		60EE6280169BDD4700BCC23D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE627F169BDD4700BCC23D /* QuartzCore.framework */; };
+		60EE6294169BDE2400BCC23D /* PopoverBackgroundArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6286169BDE2400BCC23D /* PopoverBackgroundArrowDown.png */; };
+		60EE6295169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6287169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png */; };
+		60EE6296169BDE2400BCC23D /* PopoverBackgroundArrowDownRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6288169BDE2400BCC23D /* PopoverBackgroundArrowDownRight.png */; };
+		60EE6297169BDE2400BCC23D /* PopoverBackgroundArrowDownRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6289169BDE2400BCC23D /* PopoverBackgroundArrowDownRight@2x.png */; };
+		60EE6298169BDE2400BCC23D /* PopoverBackgroundArrowSide.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE628A169BDE2400BCC23D /* PopoverBackgroundArrowSide.png */; };
+		60EE6299169BDE2400BCC23D /* PopoverBackgroundArrowSide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE628B169BDE2400BCC23D /* PopoverBackgroundArrowSide@2x.png */; };
+		60EE629A169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE628C169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom.png */; };
+		60EE629B169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE628D169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom@2x.png */; };
+		60EE629C169BDE2400BCC23D /* PopoverBackgroundArrowSideTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE628E169BDE2400BCC23D /* PopoverBackgroundArrowSideTop.png */; };
+		60EE629D169BDE2400BCC23D /* PopoverBackgroundArrowSideTop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE628F169BDE2400BCC23D /* PopoverBackgroundArrowSideTop@2x.png */; };
+		60EE629E169BDE2400BCC23D /* PopoverBackgroundArrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6290169BDE2400BCC23D /* PopoverBackgroundArrowUp.png */; };
+		60EE629F169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */; };
+		60EE62A0169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */; };
+		60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +42,6 @@
 		60EE6246169BD75E00BCC23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60EE6248169BD75E00BCC23D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60EE624C169BD75F00BCC23D /* GIKPopoverBackgroundView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GIKPopoverBackgroundView-Info.plist"; sourceTree = "<group>"; };
-		60EE624E169BD75F00BCC23D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		60EE6250169BD75F00BCC23D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		60EE6252169BD75F00BCC23D /* GIKPopoverBackgroundView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GIKPopoverBackgroundView-Prefix.pch"; sourceTree = "<group>"; };
 		60EE6253169BD75F00BCC23D /* GIKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIKAppDelegate.h; sourceTree = "<group>"; };
@@ -34,9 +49,27 @@
 		60EE6256169BD75F00BCC23D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		60EE6258169BD75F00BCC23D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		60EE625A169BD75F00BCC23D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		60EE625D169BD75F00BCC23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		60EE625F169BD75F00BCC23D /* GIKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIKViewController.h; sourceTree = "<group>"; };
 		60EE6260169BD75F00BCC23D /* GIKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIKViewController.m; sourceTree = "<group>"; };
+		60EE6272169BDC4D00BCC23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		60EE6275169BDC7700BCC23D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		60EE6278169BDCE100BCC23D /* GIKPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKPopoverBackgroundView.h; sourceTree = "<group>"; };
+		60EE6279169BDCE100BCC23D /* GIKPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKPopoverBackgroundView.m; sourceTree = "<group>"; };
+		60EE627F169BDD4700BCC23D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		60EE6286169BDE2400BCC23D /* PopoverBackgroundArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowDown.png; sourceTree = "<group>"; };
+		60EE6287169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowDown@2x.png"; sourceTree = "<group>"; };
+		60EE6288169BDE2400BCC23D /* PopoverBackgroundArrowDownRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowDownRight.png; sourceTree = "<group>"; };
+		60EE6289169BDE2400BCC23D /* PopoverBackgroundArrowDownRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowDownRight@2x.png"; sourceTree = "<group>"; };
+		60EE628A169BDE2400BCC23D /* PopoverBackgroundArrowSide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowSide.png; sourceTree = "<group>"; };
+		60EE628B169BDE2400BCC23D /* PopoverBackgroundArrowSide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowSide@2x.png"; sourceTree = "<group>"; };
+		60EE628C169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowSideBottom.png; sourceTree = "<group>"; };
+		60EE628D169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowSideBottom@2x.png"; sourceTree = "<group>"; };
+		60EE628E169BDE2400BCC23D /* PopoverBackgroundArrowSideTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowSideTop.png; sourceTree = "<group>"; };
+		60EE628F169BDE2400BCC23D /* PopoverBackgroundArrowSideTop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowSideTop@2x.png"; sourceTree = "<group>"; };
+		60EE6290169BDE2400BCC23D /* PopoverBackgroundArrowUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowUp.png; sourceTree = "<group>"; };
+		60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowUp@2x.png"; sourceTree = "<group>"; };
+		60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowUpRight.png; sourceTree = "<group>"; };
+		60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowUpRight@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60EE6280169BDD4700BCC23D /* QuartzCore.framework in Frameworks */,
 				60EE6245169BD75E00BCC23D /* UIKit.framework in Frameworks */,
 				60EE6247169BD75E00BCC23D /* Foundation.framework in Frameworks */,
 				60EE6249169BD75E00BCC23D /* CoreGraphics.framework in Frameworks */,
@@ -56,7 +90,8 @@
 		60EE6235169BD75E00BCC23D = {
 			isa = PBXGroup;
 			children = (
-				60EE624A169BD75E00BCC23D /* GIKPopoverBackgroundView */,
+				60EE624A169BD75E00BCC23D /* GIKPopoverBackgroundView-Example */,
+				60EE6277169BDCE100BCC23D /* GIKPopoverBackgroundView */,
 				60EE6243169BD75E00BCC23D /* Frameworks */,
 				60EE6241169BD75E00BCC23D /* Products */,
 			);
@@ -73,6 +108,7 @@
 		60EE6243169BD75E00BCC23D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60EE627F169BDD4700BCC23D /* QuartzCore.framework */,
 				60EE6244169BD75E00BCC23D /* UIKit.framework */,
 				60EE6246169BD75E00BCC23D /* Foundation.framework */,
 				60EE6248169BD75E00BCC23D /* CoreGraphics.framework */,
@@ -80,24 +116,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		60EE624A169BD75E00BCC23D /* GIKPopoverBackgroundView */ = {
+		60EE624A169BD75E00BCC23D /* GIKPopoverBackgroundView-Example */ = {
 			isa = PBXGroup;
 			children = (
+				60EE6285169BDE2400BCC23D /* Images */,
+				60EE6271169BDC4D00BCC23D /* MainStoryboard.storyboard */,
 				60EE6253169BD75F00BCC23D /* GIKAppDelegate.h */,
 				60EE6254169BD75F00BCC23D /* GIKAppDelegate.m */,
-				60EE625C169BD75F00BCC23D /* MainStoryboard.storyboard */,
 				60EE625F169BD75F00BCC23D /* GIKViewController.h */,
 				60EE6260169BD75F00BCC23D /* GIKViewController.m */,
 				60EE624B169BD75F00BCC23D /* Supporting Files */,
 			);
-			path = GIKPopoverBackgroundView;
+			path = "GIKPopoverBackgroundView-Example";
 			sourceTree = "<group>";
 		};
 		60EE624B169BD75F00BCC23D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				60EE6274169BDC7700BCC23D /* InfoPlist.strings */,
 				60EE624C169BD75F00BCC23D /* GIKPopoverBackgroundView-Info.plist */,
-				60EE624D169BD75F00BCC23D /* InfoPlist.strings */,
 				60EE6250169BD75F00BCC23D /* main.m */,
 				60EE6252169BD75F00BCC23D /* GIKPopoverBackgroundView-Prefix.pch */,
 				60EE6256169BD75F00BCC23D /* Default.png */,
@@ -105,6 +142,36 @@
 				60EE625A169BD75F00BCC23D /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60EE6277169BDCE100BCC23D /* GIKPopoverBackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				60EE6278169BDCE100BCC23D /* GIKPopoverBackgroundView.h */,
+				60EE6279169BDCE100BCC23D /* GIKPopoverBackgroundView.m */,
+			);
+			path = GIKPopoverBackgroundView;
+			sourceTree = "<group>";
+		};
+		60EE6285169BDE2400BCC23D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				60EE6286169BDE2400BCC23D /* PopoverBackgroundArrowDown.png */,
+				60EE6287169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png */,
+				60EE6288169BDE2400BCC23D /* PopoverBackgroundArrowDownRight.png */,
+				60EE6289169BDE2400BCC23D /* PopoverBackgroundArrowDownRight@2x.png */,
+				60EE628A169BDE2400BCC23D /* PopoverBackgroundArrowSide.png */,
+				60EE628B169BDE2400BCC23D /* PopoverBackgroundArrowSide@2x.png */,
+				60EE628C169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom.png */,
+				60EE628D169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom@2x.png */,
+				60EE628E169BDE2400BCC23D /* PopoverBackgroundArrowSideTop.png */,
+				60EE628F169BDE2400BCC23D /* PopoverBackgroundArrowSideTop@2x.png */,
+				60EE6290169BDE2400BCC23D /* PopoverBackgroundArrowUp.png */,
+				60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */,
+				60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */,
+				60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,11 +226,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60EE624F169BD75F00BCC23D /* InfoPlist.strings in Resources */,
 				60EE6257169BD75F00BCC23D /* Default.png in Resources */,
 				60EE6259169BD75F00BCC23D /* Default@2x.png in Resources */,
 				60EE625B169BD75F00BCC23D /* Default-568h@2x.png in Resources */,
-				60EE625E169BD75F00BCC23D /* MainStoryboard.storyboard in Resources */,
+				60EE6273169BDC4D00BCC23D /* MainStoryboard.storyboard in Resources */,
+				60EE6276169BDC7700BCC23D /* InfoPlist.strings in Resources */,
+				60EE6294169BDE2400BCC23D /* PopoverBackgroundArrowDown.png in Resources */,
+				60EE6295169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png in Resources */,
+				60EE6296169BDE2400BCC23D /* PopoverBackgroundArrowDownRight.png in Resources */,
+				60EE6297169BDE2400BCC23D /* PopoverBackgroundArrowDownRight@2x.png in Resources */,
+				60EE6298169BDE2400BCC23D /* PopoverBackgroundArrowSide.png in Resources */,
+				60EE6299169BDE2400BCC23D /* PopoverBackgroundArrowSide@2x.png in Resources */,
+				60EE629A169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom.png in Resources */,
+				60EE629B169BDE2400BCC23D /* PopoverBackgroundArrowSideBottom@2x.png in Resources */,
+				60EE629C169BDE2400BCC23D /* PopoverBackgroundArrowSideTop.png in Resources */,
+				60EE629D169BDE2400BCC23D /* PopoverBackgroundArrowSideTop@2x.png in Resources */,
+				60EE629E169BDE2400BCC23D /* PopoverBackgroundArrowUp.png in Resources */,
+				60EE629F169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png in Resources */,
+				60EE62A0169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png in Resources */,
+				60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,26 +258,27 @@
 				60EE6251169BD75F00BCC23D /* main.m in Sources */,
 				60EE6255169BD75F00BCC23D /* GIKAppDelegate.m in Sources */,
 				60EE6261169BD75F00BCC23D /* GIKViewController.m in Sources */,
+				60EE627A169BDCE100BCC23D /* GIKPopoverBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		60EE624D169BD75F00BCC23D /* InfoPlist.strings */ = {
+		60EE6271169BDC4D00BCC23D /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				60EE624E169BD75F00BCC23D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		60EE625C169BD75F00BCC23D /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60EE625D169BD75F00BCC23D /* en */,
+				60EE6272169BDC4D00BCC23D /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		60EE6274169BDC7700BCC23D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60EE6275169BDC7700BCC23D /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,8 +340,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GIKPopoverBackgroundView/GIKPopoverBackgroundView-Prefix.pch";
-				INFOPLIST_FILE = "GIKPopoverBackgroundView/GIKPopoverBackgroundView-Info.plist";
+				GCC_PREFIX_HEADER = "GIKPopoverBackgroundView-Example/GIKPopoverBackgroundView-Prefix.pch";
+				INFOPLIST_FILE = "GIKPopoverBackgroundView-Example/GIKPopoverBackgroundView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,8 +352,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GIKPopoverBackgroundView/GIKPopoverBackgroundView-Prefix.pch";
-				INFOPLIST_FILE = "GIKPopoverBackgroundView/GIKPopoverBackgroundView-Info.plist";
+				GCC_PREFIX_HEADER = "GIKPopoverBackgroundView-Example/GIKPopoverBackgroundView-Prefix.pch";
+				INFOPLIST_FILE = "GIKPopoverBackgroundView-Example/GIKPopoverBackgroundView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -295,6 +379,7 @@
 				60EE6266169BD75F00BCC23D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
