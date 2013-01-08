@@ -1,6 +1,8 @@
 # GIKPopoverBackgroundView
 
-GIKPopoverBackgroundView is a UIPopoverBackgroundView subclass, and shows how to customise the background of a UIPopoverController using images found in UIKit's `Shared artwork` folder.
+GIKPopoverBackgroundView is a UIPopoverBackgroundView subclass which shows how to customise the background of a UIPopoverController using images found in UIKit's `Shared artwork` folder.
+
+iOS 5.x and 6.x are supported. Background drop shadows don't appear to work on subclasses of UIPopoverBackgroundView if the deployment target is iOS 5.x. In this instance, a drop shadow is added to the background's layer, and will animate in response to keyboard appearance.
 
 ## Credits
 
