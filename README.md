@@ -11,6 +11,7 @@ GIKPopoverBackgroundView was created by [Gordon Hughes](https://github.com/gik/)
 ## Contact
 
 [Gordon Hughes](https://github.com/gik/)
+
 [@gordonhughes](http://twitter.com/gordonhughes)
 
 ## License
