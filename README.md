@@ -4,6 +4,8 @@ GIKPopoverBackgroundView is a UIPopoverBackgroundView subclass which shows how t
 
 iOS 5.x and 6.x are supported. Background drop shadows don't appear to work on subclasses of UIPopoverBackgroundView if the deployment target is iOS 5.x. In this instance, a drop shadow is added to the background's layer, and will animate in response to keyboard appearance.
 
+More details to follow. It's late. :)
+
 ## Credits
 
 GIKPopoverBackgroundView was created by [Gordon Hughes](https://github.com/gik/).
