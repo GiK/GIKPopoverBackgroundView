@@ -22,7 +22,7 @@ The approach taken in GIKPopoverBackgroundView is to draw a stretchable image in
 
 ``` objective-c
 - (UIImage *)imageFromImageContextWithSourceImage:(UIImage *)image size:(CGSize)size
-- {
+{
   UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
   [image drawInRect:(CGRect){ .origin = CGPointZero, .size = size }];
   UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
@@ -39,10 +39,11 @@ The same technique is used for popover backgrounds with left-facing or 'UpLeft' 
 
 ``` objective-c
 - (UIImage *)mirroredImage:(UIImage *)image
-- {
+{
   UIImage *mirror = [UIImage imageWithCGImage:image.CGImage scale:[[UIScreen mainScreen] scale] orientation:UIImageOrientationUpMirrored];
   return [self imageFromImageContextWithSourceImage:mirror size:mirror.size];
 }
+```
 
 
 iOS 5.x and 6.x are supported. Background drop shadows don't appear to work on subclasses of UIPopoverBackgroundView if the deployment target is iOS 5.x. In this instance, a drop shadow is added to the background's layer, and will animate in response to keyboard appearance.
