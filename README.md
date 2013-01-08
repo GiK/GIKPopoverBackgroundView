@@ -16,9 +16,9 @@ The Down, Up, and Side images require special handling. To draw a background wit
 
 ### Measure once, stretch twice
 
-Unsurprisingly, judicious use of UIImage's `-resizableImageWithCapInsets:` method is made throughout. What might not be apparent, however, is that naively applying `-resizableImageWithCapInsets:` twice just won't work. Specifying a stretchable region doesn't affect the underlying image until it's drawn into a context or a view.
+Unsurprisingly, judicious use of UIImage's `-resizableImageWithCapInsets:` method is made throughout. What might not be apparent, however, is that naively applying cap insets twice won't work. Specifying a stretchable region doesn't affect the underlying image until it's drawn into a context or a view.
 
-The approach taken in GIKPopoverBackgroundView is to draw a stretchable image into a bitmap-based graphics context with appropriate size using `UIGraphicsBeginImageContextWithOptions`:
+The approach taken in GIKPopoverBackgroundView is to draw a stretchable image into a bitmap-based graphics context with appropriate size:
 
 ``` objective-c
 - (UIImage *)imageFromImageContextWithSourceImage:(UIImage *)image size:(CGSize)size
@@ -31,7 +31,7 @@ The approach taken in GIKPopoverBackgroundView is to draw a stretchable image in
 }
 ```
 
-A second set of cap insets are added to the resultant image and it's this new resizable image which is applied to the background `UIImageView`.
+A second set of cap insets are added to the resultant image and it's this new resizable image which is applied to the popover background's `UIImageView`.
 
 ### Mirror, mirror
 
@@ -45,8 +45,29 @@ The same technique is used for popover backgrounds with left-facing or 'UpLeft' 
 }
 ```
 
+### Drop shadows and iOS 5.x
 
-iOS 5.x and 6.x are supported. Background drop shadows don't appear to work on subclasses of UIPopoverBackgroundView if the deployment target is iOS 5.x. In this instance, a drop shadow is added to the background's layer, and will animate in response to keyboard appearance.
+Background drop shadows don't appear to work on subclasses of UIPopoverBackgroundView if the deployment target is iOS 5.x. In this instance, a drop shadow is drawn using the `shadowPath` property of the background's layer.
+
+The `shadowPath` property of `CALayer` doesn't respond to implicit animations such as changes to a layer's bounds. As such, we must use an explicit animation to animate the shadow as the popover background's geometry is changing.
+
+The documentation for `UIPopoverBackgroundView` states that `-setArrowOffset:` is called inside an animation block managed by the UIPopoverController. This would seem to be the ideal place to sync  the bounds and shadowPath animations. When `setArrowOffset:` is called, we check the `animationKeys` array of the layer for a `bounds` key. If one is found, then we know the background's frame is changing - possibly as the result of the keyboard appearing/disappearing. We can apply the `timingFunction` and `duration` properties of the bounds animation to a new `CABasicAnimation` for the `shadowPath`.
+
+``` objective-c
+- (void)addShadowPathAnimationIfNecessary:(CGPathRef)pathRef
+{
+  NSArray *animationKeys = [self.popoverBackground.layer animationKeys];
+  if ([animationKeys containsObject:@"bounds"])
+  {
+	  CAAnimation *boundsAnimation = [self.popoverBackground.layer animationForKey:@"bounds"];
+	  CABasicAnimation *shadowPathAnimation = [CABasicAnimation animationWithKeyPath:@"shadowPath"];
+	  shadowPathAnimation.toValue = [NSValue valueWithPointer:pathRef];
+	  shadowPathAnimation.timingFunction = boundsAnimation.timingFunction;
+	  shadowPathAnimation.duration = boundsAnimation.duration;
+	  [self.popoverBackground.layer addAnimation:shadowPathAnimation forKey:@"shadowPath"];
+  }
+}
+```
 
 ## Credits
 
