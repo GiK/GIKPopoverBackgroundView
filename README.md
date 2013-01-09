@@ -69,6 +69,23 @@ The documentation for `UIPopoverBackgroundView` states that `-setArrowOffset:` i
 }
 ```
 
+## Usage
+
+To use, add GIKPopoverBackgroundView.h and GIKPopoverBackgroundView.m to your Xcode project. Feel free to use the supplied images (found in the example project) and their default `UIEdgeInsets` values. In the view controller which manages your popover controller, set the popover controller's `popoverBackgroundViewClass` property:
+
+``` objective-c
+popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
+popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
+```
+
+## Sample Project
+
+The included sample project covers a number of scenarios where source images are stretched twice, mirrored, and animated in response to keyboard appearance.
+
+## Requirements
+
+GIKPopoverBackgroundView uses ARC and requires iOS 5.0 or above.
+
 ## Credits
 
 GIKPopoverBackgroundView was created by [Gordon Hughes](https://github.com/gik/).
