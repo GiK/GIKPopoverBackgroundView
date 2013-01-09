@@ -18,6 +18,8 @@ The Down, Up, and Side images require special handling. To draw a background wit
 
 [This short screencast](http://d.pr/v/49MN) of the example app demonstrates popovers drawn in a number of orientations from various anchor points. The navigation bar and toolbar of a popover controller take on the appearance of the background view with no additional development effort.
 
+## Implementation Details
+
 ### Measure once, stretch twice
 
 Unsurprisingly, judicious use of UIImage's `-resizableImageWithCapInsets:` method is made throughout. For popovers which require two stretching operations, naively applying cap insets twice won't work. Specifying a stretchable region doesn't affect the underlying image until the image is drawn into a context or a view.
