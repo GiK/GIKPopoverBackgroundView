@@ -37,7 +37,22 @@
         segueIdentifier = segue.identifier;
         popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
         popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
+        
+        if ([segue.identifier isEqualToString:@"popover2"])
+        {
+            UINavigationBar *navBar = [(UINavigationController *)popoverController.contentViewController navigationBar];
+            [self applyTitleTextAttributesToNavigationBar:navBar];
+        }
     }
+}
+
+- (void)applyTitleTextAttributesToNavigationBar:(UINavigationBar *)navBar
+{
+    NSDictionary *attributes = @{ UITextAttributeTextColor : [UIColor colorWithRed:122.0/255.0 green:120.0/255.0 blue:114.0/255.0 alpha:1.0],
+                                  UITextAttributeTextShadowColor : [UIColor whiteColor],
+                                  UITextAttributeTextShadowOffset : [NSValue valueWithCGSize:(CGSize){ .width = 0.0, .height = 1.0}] };
+
+    [navBar setTitleTextAttributes:attributes];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
