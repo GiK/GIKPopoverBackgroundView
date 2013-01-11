@@ -75,6 +75,40 @@ The documentation for `UIPopoverBackgroundView` states that `-setArrowOffset:` i
 }
 ```
 
+### Tint support
+
+PopoverControls have historically never supported tinting of the view. This fork contains the ability to use the tint function added.
+
+Tinting was achieved by adding a method to modify the images that are included on the fly.
+
+``` objective-c
+- (UIImage *)tintedImage:(UIImage*)image usingColor:(UIColor *)tintColor;
+{
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 1.0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    
+    // draw original image
+    [image drawInRect:rect blendMode:kCGBlendModeNormal alpha:1.0f];
+    
+    // tint image (loosing alpha).
+    // kCGBlendModeOverlay is the closest I was able to match the
+    // actual process used by apple in navigation bar
+    CGContextSetBlendMode(context, kCGBlendModeMultiply);
+    [tintColor setFill];
+    CGContextFillRect(context, rect);
+    
+    // mask by alpha values of original image
+    [image drawInRect:rect blendMode:kCGBlendModeDestinationIn alpha:1.0f];
+    
+    UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return tintedImage;
+}
+```
+
+From the method above we can see that we are modifying the image by setting the blend mode of the image to multiply for a better color replacement. Overlay mode is included but commented out because it creates a more washed out image.
+
 ## Usage
 
 To use, add GIKPopoverBackgroundView.h and GIKPopoverBackgroundView.m to your Xcode project. Feel free to use the supplied images (found in the example project) and their default `UIEdgeInsets` values. In the view controller which manages your popover controller, set the popover controller's `popoverBackgroundViewClass` property:
@@ -84,9 +118,23 @@ popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
 popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
 ```
 
+to use the tint option, add GIKPopoverBackgroundView.h and .m as you would before.
+
+``` objective-c
+popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
+popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView classWithTintColor:(UIColor*)];
+```
+
 ## Sample Project
 
 The included sample project covers a number of scenarios where source images are stretched twice, mirrored, and animated in response to keyboard appearance.
+The original images can be seen by uncommenting the line in the GIKViewController.m
+
+```objective-c
+popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
+```
+
+
 
 ## Requirements
 
@@ -106,6 +154,10 @@ GIKPopoverBackgroundView was created by [Gordon Hughes](https://github.com/gik/)
 [Gordon Hughes](https://github.com/gik/)
 
 [@gordonhughes](http://twitter.com/gordonhughes)
+
+[Eric Rolf](https://github.com/koolstar/)
+
+[@Eric_Rolf](https://twitter.com/eric_rolf)
 
 ## License
 
