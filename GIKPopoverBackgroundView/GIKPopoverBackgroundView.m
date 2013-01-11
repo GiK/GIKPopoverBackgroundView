@@ -321,6 +321,9 @@ static UIColor *tintColor = nil;
     // tint image (loosing alpha).
     // kCGBlendModeOverlay is the closest I was able to match the
     // actual process used by apple in navigation bar
+    // kCGBlendModeMultiply is used currently because it provides
+    // the best replacement of image. The overlay mode will create
+    // just that an overlay, the color will seem washed out.
     CGContextSetBlendMode(context, kCGBlendModeMultiply);
     [tintColor setFill];
     CGContextFillRect(context, rect);
