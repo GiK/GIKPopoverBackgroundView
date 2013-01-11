@@ -12,7 +12,7 @@
 // Layout of images will be handled automatically, and it works with all values of UIPopoverArrowDirection.
 
 #import <UIKit/UIKit.h>
-
+#import <QuartzCore/QuartzCore.h>
 /**
  Image-specific values for calulating the background's layout.
  */
@@ -60,6 +60,7 @@ static const CGFloat kSecondHalfRightInset          = 9.0; // Value for .right i
 @property (nonatomic, assign) CGFloat arrowOffset;
 @property (nonatomic, assign) UIPopoverArrowDirection arrowDirection;
 
++ (id)classWithTintColor:(UIColor*)color;
 + (CGFloat)arrowHeight;
 + (CGFloat)arrowBase;
 + (UIEdgeInsets)contentViewInsets;

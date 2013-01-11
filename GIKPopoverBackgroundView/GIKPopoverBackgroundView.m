@@ -6,7 +6,6 @@
 //
 
 #import "GIKPopoverBackgroundView.h"
-#import <QuartzCore/QuartzCore.h>
 
 // A struct containing the min and max horizontal and vertical positions for the popover arrow. If the arrow's position exceeds these limits, the PopoverBackgroundArrow[UpRight|DownRight|SideTop|SideBottom].png images are drawn.
 struct GIKPopoverExtents {
@@ -27,6 +26,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 
 @end
 
+static UIColor *tintColor = nil;
 
 @implementation GIKPopoverBackgroundView
 
@@ -35,6 +35,15 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 
 
 #pragma mark - UIPopoverBackgroundView required values
+
++ (id)classWithTintColor:(UIColor*)color
+{
+    Class class = [super class];
+    if (class) {
+        tintColor = color;
+    }
+    return class;
+}
 
 + (UIEdgeInsets)contentViewInsets
 {
@@ -119,7 +128,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-        
+    
     _popoverExtents = (GIKPopoverExtents){
         .left   = CGRectGetMinX(self.bounds) + kPopoverCornerRadius,
         .right  = CGRectGetMaxX(self.bounds) - kPopoverCornerRadius,
@@ -134,7 +143,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
     self.popoverBackground.center = self.center;
     self.popoverBackground.bounds = self.bounds;
     
-    self.popoverBackground.image = [self wantsUpOrDownArrow] ? [self upOrDownArrowImage] : [self sideArrowImage];    
+    self.popoverBackground.image = [self wantsUpOrDownArrow] ? [self upOrDownArrowImage] : [self sideArrowImage];
 }
 
 
@@ -220,7 +229,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 
 - (void)adjustCentersIfNecessary
 {
-     // fix centers of left-pointing popovers so that their shadows are drawn correctly.   
+    // fix centers of left-pointing popovers so that their shadows are drawn correctly.
     if (self.arrowDirection == UIPopoverArrowDirectionLeft)
     {
         self.center = (CGPoint){ .x = self.center.x + [GIKPopoverBackgroundView arrowHeight], .y = self.center.y };
@@ -233,13 +242,13 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 
 - (UIImage *)stretchableImageNamed:(NSString *)name insets:(UIEdgeInsets)insets mirrored:(BOOL)mirrored
 {
-    UIImage *image = [UIImage imageNamed:name];
+        UIImage *image = (tintColor) ? [self tintedImage:[UIImage imageNamed:name] usingColor:tintColor] : [UIImage imageNamed:name];
     return (mirrored) ? [[self mirroredImage:image] resizableImageWithCapInsets:[self mirroredInsets:insets]] : [image resizableImageWithCapInsets:insets];
 }
 
 - (UIImage *)twoPartStretchableImageNamed:(NSString *)name insets:(UIEdgeInsets)insets
 {
-    UIImage *image = [UIImage imageNamed:name];
+    UIImage *image = (tintColor) ? [self tintedImage:[UIImage imageNamed:name] usingColor:tintColor] : [UIImage imageNamed:name];
     
     if (self.arrowDirection == UIPopoverArrowDirectionLeft)
     {
@@ -298,6 +307,30 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
     UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return result;
+}
+
+- (UIImage *)tintedImage:(UIImage*)image usingColor:(UIColor *)tintColor;
+{
+    UIGraphicsBeginImageContextWithOptions(image.size, NO, 1.0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect rect = CGRectMake(0, 0, image.size.width, image.size.height);
+    
+    // draw original image
+    [image drawInRect:rect blendMode:kCGBlendModeNormal alpha:1.0f];
+    
+    // tint image (loosing alpha).
+    // kCGBlendModeOverlay is the closest I was able to match the
+    // actual process used by apple in navigation bar
+    CGContextSetBlendMode(context, kCGBlendModeMultiply);
+    [tintColor setFill];
+    CGContextFillRect(context, rect);
+    
+    // mask by alpha values of original image
+    [image drawInRect:rect blendMode:kCGBlendModeDestinationIn alpha:1.0f];
+    
+    UIImage *tintedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return tintedImage;
 }
 
 @end
