@@ -149,7 +149,7 @@ GIKPopoverBackgroundView uses ARC and requires iOS 5.0 or above.
 
 GIKPopoverBackgroundView was created by [Gordon Hughes](https://github.com/gik/).
 
-Tint Support Added By [Eric Rolf](https://github.com/koolstar/).
+Tint Support Added By [Eric Rolf](https://github.com/xrolfex/).
 
 ## Contact
 
@@ -157,7 +157,7 @@ Tint Support Added By [Eric Rolf](https://github.com/koolstar/).
 
 [@gordonhughes](http://twitter.com/gordonhughes)
 
-[Eric Rolf](https://github.com/koolstar/)
+[Eric Rolf](https://github.com/xrolfex/)
 
 [@Eric_Rolf](https://twitter.com/eric_rolf)
 
