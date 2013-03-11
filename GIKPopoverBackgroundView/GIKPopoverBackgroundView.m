@@ -254,7 +254,7 @@ typedef struct GIKPopoverExtents GIKPopoverExtents;
 
 - (CGFloat)firstHalfStretchAmountForImage:(UIImage *)image
 {
-    return [self wantsUpOrDownArrow] ? _arrowCenter + (image.size.width - 1) / 2.0 : _arrowCenter + (image.size.height / 2) - 1 - kSideArrowCenterOffset;
+    return roundf([self wantsUpOrDownArrow] ? _arrowCenter + (image.size.width - 1) / 2.0 : _arrowCenter + (image.size.height / 2) - 1 - kSideArrowCenterOffset);
 }
 
 - (CGSize)contextSizeForFirstHalfImage:(UIImage *)image
