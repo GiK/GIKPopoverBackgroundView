@@ -1,22 +1,22 @@
 //
-//  GIKViewController.m
+//  GIKRenderedImagesViewController.m
 //  GIKPopoverBackgroundView
 //
 //  Created by Gordon Hughes on 1/7/13.
 //  Copyright (c) 2013 Gordon Hughes. All rights reserved.
 //
 
-#import "GIKViewController.h"
-#import "GIKPopoverBackgroundView.h"
+#import "GIKRenderedImagesViewController.h"
+#import "GIKRenderedImagesPopoverBackgroundView.h"
 
-@interface GIKViewController () {
+@interface GIKRenderedImagesViewController () {
     UIPopoverController *popoverController;
     NSString *segueIdentifier;
 }
 
 @end
 
-@implementation GIKViewController
+@implementation GIKRenderedImagesViewController
 
 - (void)viewDidLoad
 {
@@ -36,7 +36,7 @@
     {
         segueIdentifier = segue.identifier;
         popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
-        popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
+        popoverController.popoverBackgroundViewClass = [GIKRenderedImagesPopoverBackgroundView class];
         
         if ([segue.identifier isEqualToString:@"popover2"])
         {
@@ -64,6 +64,10 @@
     }
 }
 
+- (IBAction)switchToUsingFiles:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+}
 
 #pragma mark - iOS 6 rotation
 

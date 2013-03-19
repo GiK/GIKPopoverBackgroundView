@@ -1,5 +1,5 @@
 //
-//  GIKViewController.h
+//  GIKImageFilesViewController.h
 //  GIKPopoverBackgroundView
 //
 //  Created by Gordon Hughes on 1/7/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GIKViewController : UIViewController
+@interface GIKImageFilesViewController : UIViewController
 
 @end
