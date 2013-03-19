@@ -2,7 +2,7 @@
 
 GIKPopoverBackgroundView is a UIPopoverBackgroundView subclass which uses images similar to those found in UIKit to customise the background of a UIPopoverController.
 
-Unlike most other third-party implementations, GIKPopoverBackgroundView doesn't use separate background and arrow images, so the  appearance is seamless for all orientations.
+Unlike most other third-party implementations, GIKPopoverBackgroundView doesn't use separate background and arrow images, so the  appearance is seamless for all orientations. Images can be rendered by using a border color, a gradient from color, and a gradient to color, or they can be provided as files.
 
 ## Source Images
 
@@ -19,6 +19,51 @@ The Down, Up, and Side images require special handling. To draw a background wit
 [This short screencast](http://d.pr/v/49MN) of the example app demonstrates popovers drawn in a number of orientations from various anchor points. The navigation bar and toolbar of a popover controller take on the appearance of the background view with no additional development effort.
 
 ## Implementation Details
+
+### To render or not to render
+
+The default behavior of GIKPopoverBackgroundView is to render the images needed using three colors. You can change the colors used by creating a custom subclass and overriding the following methods:
+
+``` objective-c
+- (UIColor *)popoverBorderColor;
+- (UIColor *)popoverGradientFromColor;
+- (UIColor *)popoverGradientToColor;
+```
+
+Alternatively, if you would rather provide custom artwork for the images instead of rendering them you can override the following methods in your subclass:
+
+``` objective-c
+- (UIImage *)arrowUpImage;
+- (UIImage *)arrowUpRightImage;
+- (UIImage *)arrowDownImage;
+- (UIImage *)arrowDownRightImage;
+- (UIImage *)arrowSideImage;
+- (UIImage *)arrowSideTopImage;
+- (UIImage *)arrowSideBottomImage;
+
+```
+
+If you do provide your own image files, and they do not match the dimensions of the rendered images, you will need to override some or all of the following methods:
+
+```objective-c
++ (CGFloat)arrowHeight;
++ (CGFloat)arrowBase;
++ (UIEdgeInsets)contentViewInsets;
+
+- (CGFloat)popoverCornerRadius;
+- (CGFloat)sideArrowCenterOffset;
+
+- (UIEdgeInsets)arrowUpInsets;
+- (UIEdgeInsets)arrowUpRightInsets;
+- (UIEdgeInsets)arrowDownInsets;
+- (UIEdgeInsets)arrowDownRightInsets;
+- (UIEdgeInsets)arrowSideInsets;
+- (UIEdgeInsets)arrowSideTopInsets;
+- (UIEdgeInsets)arrowSideBottomInsets;
+
+- (CGFloat)secondHalfBottomInset;
+- (CGFloat)secondHalfRightInset;
+```
 
 ### Measure once, stretch twice
 
@@ -84,9 +129,11 @@ popoverController = [(UIStoryboardPopoverSegue *)segue popoverController];
 popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
 ```
 
+To change the colors of the rendered images, or to use image files, simply subclass GIKPopoverBackgroundView and override the appropriate methods.
+
 ## Sample Project
 
-The included sample project covers a number of scenarios where source images are stretched twice, mirrored, and animated in response to keyboard appearance.
+The included sample project covers a number of scenarios where source images are stretched twice, mirrored, and animated in response to keyboard appearance. It also demonstrates the use of subclassing to override the colors used in rendering, or to override the images used for the popover background.
 
 ## Requirements
 
