@@ -9,6 +9,9 @@
 
 // popoverController.popoverBackgroundViewClass = [GIKPopoverBackgroundView class];
 
+// To change the colors used for rendering, create a subclass of GIKPopoverBackgroundView and override the color methods.
+// You can also provide custom image files instead of rendering by subclassing and overriding the image methods and the appropriate size and inset methods.
+
 // Layout of images will be handled automatically, and it works with all values of UIPopoverArrowDirection.
 
 #import <UIKit/UIKit.h>
