@@ -22,17 +22,6 @@ static const CGFloat kPopoverCornerRadius       = 7.0;  // Used in a bounds chec
 static const CGFloat kSideArrowCenterOffset     = 7.0;  // Added to the arrow's center for ...Side.png image to account for the taller top half.
 
 /**
- Filenames for the seven required background images. If a popover's arrowDirection is UIPopoverArrowDirectionLeft, the equivalent right-facing image will be mirrored.
- */
-static NSString * const kArrowUp         = @"PopoverBackgroundArrowUp.png";
-static NSString * const kArrowUpRight    = @"PopoverBackgroundArrowUpRight.png";
-static NSString * const kArrowDown       = @"PopoverBackgroundArrowDown.png";
-static NSString * const kArrowDownRight  = @"PopoverBackgroundArrowDownRight.png";
-static NSString * const kArrowSide       = @"PopoverBackgroundArrowSide.png";
-static NSString * const kArrowSideTop    = @"PopoverBackgroundArrowSideTop.png";
-static NSString * const kArrowSideBottom = @"PopoverBackgroundArrowSideBottom.png";
-
-/**
  Content and background insets.
  */
 static const UIEdgeInsets kPopoverEdgeInsets = { 8.0,  8.0,  8.0,  8.0}; // Distance between the edge of the background view and the edge of the content view.
@@ -45,7 +34,7 @@ static const UIEdgeInsets kArrowUpRightInsets       = {41.0,  9.0,  9.0, 42.0};
 static const UIEdgeInsets kArrowDownInsets          = {23.0,  9.0, 27.0, 47.0};
 static const UIEdgeInsets kArrowDownRightInsets     = {23.0,  9.0, 27.0, 42.0};
 static const UIEdgeInsets kArrowSideInsets          = {24.0,  9.0, 47.0, 27.0};
-static const UIEdgeInsets kArrowSideTopInsets       = {43.0,  9.0,  9.0, 27.0};
+static const UIEdgeInsets kArrowSideTopInsets       = {43.0,  9.0, 23.0, 27.0};
 static const UIEdgeInsets kArrowSideBottomInsets    = {23.0,  9.0, 43.0, 27.0};
 
 static const CGFloat kSecondHalfBottomInset         = 9.0; // Value for .bottom inset in the second half of a two-part vertical stretch operation.
@@ -60,8 +49,46 @@ static const CGFloat kSecondHalfRightInset          = 9.0; // Value for .right i
 @property (nonatomic, assign) CGFloat arrowOffset;
 @property (nonatomic, assign) UIPopoverArrowDirection arrowDirection;
 
+
+
+/**
+ Colors to be used when rendering the popover images. Override these methods in a subclass to provide custom colors.
+ */
+- (UIColor *)popoverBorderColor;
+- (UIColor *)popoverGradientFromColor;
+- (UIColor *)popoverGradientToColor;
+
+/**
+ Override these methods in a subclass if you'd rather provide your own images than have them rendered. If your images are different dimensions than the
+ ones rendered by this class, you will need to override the appropriate size and inset methods as well.
+ */
+- (UIImage *)arrowUpImage;
+- (UIImage *)arrowUpRightImage;
+- (UIImage *)arrowDownImage;
+- (UIImage *)arrowDownRightImage;
+- (UIImage *)arrowSideImage;
+- (UIImage *)arrowSideTopImage;
+- (UIImage *)arrowSideBottomImage;
+
+/**
+ Sizing and inset information to override in your subclass if you provide custom images with different dimensions.
+ */
 + (CGFloat)arrowHeight;
 + (CGFloat)arrowBase;
 + (UIEdgeInsets)contentViewInsets;
+
+- (CGFloat)popoverCornerRadius;
+- (CGFloat)sideArrowCenterOffset;
+
+- (UIEdgeInsets)arrowUpInsets;
+- (UIEdgeInsets)arrowUpRightInsets;
+- (UIEdgeInsets)arrowDownInsets;
+- (UIEdgeInsets)arrowDownRightInsets;
+- (UIEdgeInsets)arrowSideInsets;
+- (UIEdgeInsets)arrowSideTopInsets;
+- (UIEdgeInsets)arrowSideBottomInsets;
+
+- (CGFloat)secondHalfBottomInset;
+- (CGFloat)secondHalfRightInset;
 
 @end
