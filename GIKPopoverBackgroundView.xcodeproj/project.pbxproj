@@ -34,6 +34,8 @@
 		60EE629F169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */; };
 		60EE62A0169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */; };
 		60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */; };
+		F86BD86316ED83A400E78040 /* GIKPopoverBackgroundView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F86BD86216ED83A400E78040 /* GIKPopoverBackgroundView.podspec */; };
+		F8DD1A111743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd in Resources */ = {isa = PBXBuildFile; fileRef = F8DD1A101743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,8 @@
 		60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowUp@2x.png"; sourceTree = "<group>"; };
 		60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowUpRight.png; sourceTree = "<group>"; };
 		60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowUpRight@2x.png"; sourceTree = "<group>"; };
+		F86BD86216ED83A400E78040 /* GIKPopoverBackgroundView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GIKPopoverBackgroundView.podspec; sourceTree = "<group>"; };
+		F8DD1A101743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = GIKPopoverBackgroundViewArrows.psd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +96,7 @@
 			children = (
 				60EE624A169BD75E00BCC23D /* GIKPopoverBackgroundView-Example */,
 				60EE6277169BDCE100BCC23D /* GIKPopoverBackgroundView */,
+				F8DD1A0F1743A51400A8111F /* Photoshop Source */,
 				60EE6243169BD75E00BCC23D /* Frameworks */,
 				60EE6241169BD75E00BCC23D /* Products */,
 			);
@@ -149,6 +154,7 @@
 			children = (
 				60EE6278169BDCE100BCC23D /* GIKPopoverBackgroundView.h */,
 				60EE6279169BDCE100BCC23D /* GIKPopoverBackgroundView.m */,
+				F86BD86216ED83A400E78040 /* GIKPopoverBackgroundView.podspec */,
 			);
 			path = GIKPopoverBackgroundView;
 			sourceTree = "<group>";
@@ -172,6 +178,14 @@
 				60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		F8DD1A0F1743A51400A8111F /* Photoshop Source */ = {
+			isa = PBXGroup;
+			children = (
+				F8DD1A101743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd */,
+			);
+			path = "Photoshop Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +259,8 @@
 				60EE629F169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png in Resources */,
 				60EE62A0169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png in Resources */,
 				60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */,
+				F86BD86316ED83A400E78040 /* GIKPopoverBackgroundView.podspec in Resources */,
+				F8DD1A111743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

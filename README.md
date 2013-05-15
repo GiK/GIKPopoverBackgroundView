@@ -14,6 +14,12 @@ The DownRight, UpRight, SideBottom, and SideTop images are used when the popover
 
 The Down, Up, and Side images require special handling. To draw a background with an up arrow centered horizontally, the Up image must be stretched twice - once on either side of the arrow.
 
+## Photoshop Source
+
+Arrows were created using shape layers and layer styles in Photoshop. The .PSD contains both 1x and 2x shapes for each arrow. Notes for each layer document the Gradient Overlay style's colour stops and values.
+
+The file is [Slicy](http://macrabbit.com/slicy/) ready for easy exporting to .PNG.
+
 ## In Action
 
 [This short screencast](http://d.pr/v/49MN) of the example app demonstrates popovers drawn in a number of orientations from various anchor points. The navigation bar and toolbar of a popover controller take on the appearance of the background view with no additional development effort.
@@ -94,7 +100,7 @@ GIKPopoverBackgroundView uses ARC and requires iOS 5.0 or above.
 
 ## //TODO:
 
-- Add source .PSD files for the backgrounds to the repository.
+- ~~Add source .PSD files for the backgrounds to the repository.~~
 - Discuss how cap insets were chosen to effect two-stage stretching.
 
 ## Credits
