@@ -15,8 +15,6 @@
 		60EE6257169BD75F00BCC23D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6256169BD75F00BCC23D /* Default.png */; };
 		60EE6259169BD75F00BCC23D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6258169BD75F00BCC23D /* Default@2x.png */; };
 		60EE625B169BD75F00BCC23D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE625A169BD75F00BCC23D /* Default-568h@2x.png */; };
-		60EE6261169BD75F00BCC23D /* GIKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE6260169BD75F00BCC23D /* GIKViewController.m */; };
-		60EE6273169BDC4D00BCC23D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6271169BDC4D00BCC23D /* MainStoryboard.storyboard */; };
 		60EE6276169BDC7700BCC23D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6274169BDC7700BCC23D /* InfoPlist.strings */; };
 		60EE627A169BDCE100BCC23D /* GIKPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EE6279169BDCE100BCC23D /* GIKPopoverBackgroundView.m */; };
 		60EE6280169BDD4700BCC23D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60EE627F169BDD4700BCC23D /* QuartzCore.framework */; };
@@ -34,8 +32,13 @@
 		60EE629F169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */; };
 		60EE62A0169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */; };
 		60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */; };
+		83C7116E16F8C3AE00C97BDD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C7116D16F8C3AE00C97BDD /* MainStoryboard.storyboard */; };
+		83C7117316F8C3CD00C97BDD /* GIKImageFilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7117016F8C3CD00C97BDD /* GIKImageFilesViewController.m */; };
 		F86BD86316ED83A400E78040 /* GIKPopoverBackgroundView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F86BD86216ED83A400E78040 /* GIKPopoverBackgroundView.podspec */; };
+		83C7117416F8C3CD00C97BDD /* GIKRenderedImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7117216F8C3CD00C97BDD /* GIKRenderedImagesViewController.m */; };
+		83C7117A16F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7117716F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.m */; };
 		F8DD1A111743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd in Resources */ = {isa = PBXBuildFile; fileRef = F8DD1A101743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd */; };
+		83C7117B16F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C7117916F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,9 +54,6 @@
 		60EE6256169BD75F00BCC23D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		60EE6258169BD75F00BCC23D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		60EE625A169BD75F00BCC23D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		60EE625F169BD75F00BCC23D /* GIKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIKViewController.h; sourceTree = "<group>"; };
-		60EE6260169BD75F00BCC23D /* GIKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIKViewController.m; sourceTree = "<group>"; };
-		60EE6272169BDC4D00BCC23D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		60EE6275169BDC7700BCC23D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		60EE6278169BDCE100BCC23D /* GIKPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKPopoverBackgroundView.h; sourceTree = "<group>"; };
 		60EE6279169BDCE100BCC23D /* GIKPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKPopoverBackgroundView.m; sourceTree = "<group>"; };
@@ -72,8 +72,17 @@
 		60EE6291169BDE2400BCC23D /* PopoverBackgroundArrowUp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowUp@2x.png"; sourceTree = "<group>"; };
 		60EE6292169BDE2400BCC23D /* PopoverBackgroundArrowUpRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopoverBackgroundArrowUpRight.png; sourceTree = "<group>"; };
 		60EE6293169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PopoverBackgroundArrowUpRight@2x.png"; sourceTree = "<group>"; };
+		83C7116D16F8C3AE00C97BDD /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		83C7116F16F8C3CD00C97BDD /* GIKImageFilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKImageFilesViewController.h; sourceTree = "<group>"; };
+		83C7117016F8C3CD00C97BDD /* GIKImageFilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKImageFilesViewController.m; sourceTree = "<group>"; };
+		83C7117116F8C3CD00C97BDD /* GIKRenderedImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKRenderedImagesViewController.h; sourceTree = "<group>"; };
+		83C7117216F8C3CD00C97BDD /* GIKRenderedImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKRenderedImagesViewController.m; sourceTree = "<group>"; };
+		83C7117616F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKImageFilesPopoverBackgroundView.h; sourceTree = "<group>"; };
+		83C7117716F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKImageFilesPopoverBackgroundView.m; sourceTree = "<group>"; };
 		F86BD86216ED83A400E78040 /* GIKPopoverBackgroundView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GIKPopoverBackgroundView.podspec; sourceTree = "<group>"; };
 		F8DD1A101743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd */ = {isa = PBXFileReference; lastKnownFileType = file; path = GIKPopoverBackgroundViewArrows.psd; sourceTree = "<group>"; };
+		83C7117816F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GIKRenderedImagesPopoverBackgroundView.h; sourceTree = "<group>"; };
+		83C7117916F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GIKRenderedImagesPopoverBackgroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +133,15 @@
 		60EE624A169BD75E00BCC23D /* GIKPopoverBackgroundView-Example */ = {
 			isa = PBXGroup;
 			children = (
+				83C7117516F8C3D000C97BDD /* Background View Subclasses */,
 				60EE6285169BDE2400BCC23D /* Images */,
-				60EE6271169BDC4D00BCC23D /* MainStoryboard.storyboard */,
+				83C7116D16F8C3AE00C97BDD /* MainStoryboard.storyboard */,
 				60EE6253169BD75F00BCC23D /* GIKAppDelegate.h */,
 				60EE6254169BD75F00BCC23D /* GIKAppDelegate.m */,
-				60EE625F169BD75F00BCC23D /* GIKViewController.h */,
-				60EE6260169BD75F00BCC23D /* GIKViewController.m */,
+				83C7116F16F8C3CD00C97BDD /* GIKImageFilesViewController.h */,
+				83C7117016F8C3CD00C97BDD /* GIKImageFilesViewController.m */,
+				83C7117116F8C3CD00C97BDD /* GIKRenderedImagesViewController.h */,
+				83C7117216F8C3CD00C97BDD /* GIKRenderedImagesViewController.m */,
 				60EE624B169BD75F00BCC23D /* Supporting Files */,
 			);
 			path = "GIKPopoverBackgroundView-Example";
@@ -180,12 +192,16 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		F8DD1A0F1743A51400A8111F /* Photoshop Source */ = {
+		83C7117516F8C3D000C97BDD /* Background View Subclasses */ = {
 			isa = PBXGroup;
 			children = (
+				83C7117616F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.h */,
+				83C7117716F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.m */,
+				83C7117816F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.h */,
 				F8DD1A101743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd */,
+				83C7117916F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.m */,
 			);
-			path = "Photoshop Source";
+			name = "Background View Subclasses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +259,6 @@
 				60EE6257169BD75F00BCC23D /* Default.png in Resources */,
 				60EE6259169BD75F00BCC23D /* Default@2x.png in Resources */,
 				60EE625B169BD75F00BCC23D /* Default-568h@2x.png in Resources */,
-				60EE6273169BDC4D00BCC23D /* MainStoryboard.storyboard in Resources */,
 				60EE6276169BDC7700BCC23D /* InfoPlist.strings in Resources */,
 				60EE6294169BDE2400BCC23D /* PopoverBackgroundArrowDown.png in Resources */,
 				60EE6295169BDE2400BCC23D /* PopoverBackgroundArrowDown@2x.png in Resources */,
@@ -261,6 +276,7 @@
 				60EE62A1169BDE2400BCC23D /* PopoverBackgroundArrowUpRight@2x.png in Resources */,
 				F86BD86316ED83A400E78040 /* GIKPopoverBackgroundView.podspec in Resources */,
 				F8DD1A111743A51400A8111F /* GIKPopoverBackgroundViewArrows.psd in Resources */,
+				83C7116E16F8C3AE00C97BDD /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,22 +289,17 @@
 			files = (
 				60EE6251169BD75F00BCC23D /* main.m in Sources */,
 				60EE6255169BD75F00BCC23D /* GIKAppDelegate.m in Sources */,
-				60EE6261169BD75F00BCC23D /* GIKViewController.m in Sources */,
 				60EE627A169BDCE100BCC23D /* GIKPopoverBackgroundView.m in Sources */,
+				83C7117316F8C3CD00C97BDD /* GIKImageFilesViewController.m in Sources */,
+				83C7117416F8C3CD00C97BDD /* GIKRenderedImagesViewController.m in Sources */,
+				83C7117A16F8C3E600C97BDD /* GIKImageFilesPopoverBackgroundView.m in Sources */,
+				83C7117B16F8C3E600C97BDD /* GIKRenderedImagesPopoverBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		60EE6271169BDC4D00BCC23D /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60EE6272169BDC4D00BCC23D /* en */,
-			);
-			name = MainStoryboard.storyboard;
-			sourceTree = "<group>";
-		};
 		60EE6274169BDC7700BCC23D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
